@@ -90,7 +90,7 @@ export const Confirmation = styled.div`
     flex-direction: column;
     color: var(--white);
     text-transform: uppercase;
-    font: 500 1.8rem 'Poppins', sans-serif;
+    font: 500 1.8rem/1.2 'Poppins', sans-serif;
     padding: 1.2rem 4rem;
     border-radius: 5px;
     cursor: pointer;
@@ -107,22 +107,23 @@ export const Confirmation = styled.div`
   }
 
   @media (max-width: 54rem) {
-    width: 90%;
+    width: 100%;
     text-align: center;
-    padding: 6rem 1.6rem;
+    padding: 3.2rem 1.6rem;
 
     svg {
       margin-bottom: 2.4rem;
     }
 
     h1 {
-      font-size: 2.4rem;
+      font-size: 3.2rem;
       margin-bottom: 2.4rem;
+      line-height: 1.1;
     }
 
     p {
-      font-size: 1.6rem;
-      line-height: 1.5;
+      font-size: 1.8rem;
+      line-height: 1.4;
       margin-bottom: 0.8rem;
     }
   }
