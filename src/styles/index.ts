@@ -105,11 +105,9 @@ export const Hero = styled.section`
     justify-content: center;
 
     h1 {
-      font: 900 6.8rem/1.1 'Poppins', sans-serif;
+      font: 900 6.4rem/1.1 'Poppins', sans-serif;
       text-transform: uppercase;
       color: var(--black);
-      animation: appearFromRight 2s 0.8s forwards;
-      opacity: 0;
       margin-bottom: 5.6rem;
       text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
       letter-spacing: -1.3px;
