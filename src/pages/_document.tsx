@@ -39,8 +39,8 @@ export default class MyDocument extends Document {
           />
           <meta property='og:url' content='https://www.juventudeup.com.br' />
           <meta property='og:type' content='website' />
-          <meta property='og:title' content='Retiro UP 21' />
-          <meta property='”og:site_name”' content='Retiro UP 21' />
+          <meta property='og:title' content='Retiro UP 22' />
+          <meta property='”og:site_name”' content='Retiro UP 22' />
           <meta
             property='og:description'
             content='Já estamos contando as horas, e você?'
