@@ -42,16 +42,6 @@ const MenuModal = ({ isMenuOpen, setIsMenuOpen }: ModalProps) => {
           </li>
           <li className='navItem'>
             <a className='navLink' onClick={closeModal}>
-              Fotos
-            </a>
-          </li>
-          <li className='navItem'>
-            <a className='navLink' onClick={closeModal}>
-              Sobre
-            </a>
-          </li>
-          <li className='navItem'>
-            <a className='navLink' onClick={closeModal}>
               Investimento
             </a>
           </li>

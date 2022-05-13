@@ -174,6 +174,7 @@ export const Hero = styled.section`
     grid-template-columns: none;
     grid-row-start: span;
     max-width: 100%;
+    height: auto;
   }
 
   @media (max-width: 54rem) {
@@ -181,6 +182,7 @@ export const Hero = styled.section`
     grid-row-start: span;
     margin-top: 2.4rem;
     gap: 6.4rem;
+    height: auto;
 
     .left {
       width: 90%;
@@ -193,12 +195,14 @@ export const Hero = styled.section`
         margin-top: 4rem;
 
         .item .itemTime {
-          font-size: 5rem;
+          font-size: 4rem;
         }
       }
 
       h1 {
         font-size: 4.8rem;
+        margin: 0;
+        width: 95%;
       }
     }
   }
@@ -287,6 +291,7 @@ export const Investment = styled.section`
     ${Title} {
       text-align: center;
       max-width: 75%;
+      line-height: 1.2;
 
       ::before {
         width: 12.8rem;
@@ -456,8 +461,13 @@ export const InscriptionForm = styled.section`
   }
 
   @media (max-width: 54rem) {
-    form {
-      width: 90%;
+    width: 90%;
+    padding: 3.2rem 1.6rem;
+    margin: 4rem auto;
+
+    ${Title} {
+      margin-bottom: 2.4rem;
+      line-height: 1.2;
     }
   }
 `;

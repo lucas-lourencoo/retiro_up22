@@ -41,7 +41,7 @@ const Header = () => {
         </nav>
 
         <button onClick={openMenu}>
-          <FiMenu strokeWidth={3} />
+          <FiMenu strokeWidth={3} color='var(--black)' />
         </button>
       </div>
 
