@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialActions"]
+}
+
+datasource db {
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("DATABASE_SHADOW_URL")
+}
+
+model Inscriptions {
+  id            String  @id @default(uuid())
+  name          String
+  bornDate      String
+  size          String
+  medicine      String
+  medicineName  String?
+  allergy       String
+  allergyName   String?
+  church        String
+  churchName    String?
+  paymentMethod String
+
+  @@map("inscriptions")
+}

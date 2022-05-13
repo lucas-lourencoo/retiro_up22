@@ -10,7 +10,7 @@ export const HeaderLayout = styled.header<HeaderProps>`
       filter: none;
     }
     to {
-      filter: brightness(150%);
+      filter: brightness(125%);
     }
   }
 
@@ -20,25 +20,23 @@ export const HeaderLayout = styled.header<HeaderProps>`
 
   border-bottom: 2px solid #555;
   width: 100%;
-  padding: 2.4rem 0;
-  max-height: 12rem;
   position: ${(props) => (props.isActive ? 'sticky' : 'relative')};
   top: ${(props) => props.isActive && '-0.4rem'};
-  background: ${(props) => props.isActive && 'var(--black)'};
   z-index: 10;
 
-  ::before {
+  ${(props) =>
+    props.isActive &&
+    `::before {
     content: '';
-    background-image: url('/back2.png');
+    background-image: url('/back2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: -1;
-    opacity: 0.4;
     top: 0;
-  }
+  }`};
 
   .menu {
     display: flex;
@@ -46,9 +44,10 @@ export const HeaderLayout = styled.header<HeaderProps>`
     justify-content: space-between;
     max-width: 80%;
     margin: 0 auto;
+    padding: 1.6rem 0;
 
     img {
-      max-height: 7rem;
+      max-height: 8rem;
     }
 
     .navItem {
@@ -60,18 +59,19 @@ export const HeaderLayout = styled.header<HeaderProps>`
         cursor: pointer;
         text-transform: uppercase;
         transition: filter 0.3s;
+        letter-spacing: -0.5px;
       }
 
       .navLinkButton {
         color: var(--black);
         font: 700 1.8rem 'Open Sans', sans-serif;
         background: linear-gradient(90.58deg, #53b151 -4.83%, #3b8e39 97.01%);
-        border-radius: 15px;
-        padding: 1.2rem 2.4rem;
+        padding: 0.8rem 2.4rem;
         text-transform: uppercase;
         text-rendering: optimizeLegibility;
         animation: light 1s 1s infinite alternate ease;
         cursor: pointer;
+        border-radius: 6px;
       }
     }
   }

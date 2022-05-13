@@ -70,7 +70,7 @@ export const Hero = styled.section`
 
     .infos {
       color: var(--black);
-      font: 400 2.8rem 'Open Sans', sans-serif;
+      font: 400 3.2rem 'Open Sans', sans-serif;
       opacity: 0;
       animation: appear 2s 1.8s forwards;
 
@@ -105,14 +105,14 @@ export const Hero = styled.section`
     justify-content: center;
 
     h1 {
-      font: 900 6.2rem/1.2 'Poppins', sans-serif;
+      font: 900 6.8rem/1.1 'Poppins', sans-serif;
       text-transform: uppercase;
       color: var(--black);
       animation: appearFromRight 2s 0.8s forwards;
       opacity: 0;
-      white-space: nowrap;
       margin-bottom: 5.6rem;
       text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      letter-spacing: -1.3px;
 
       @media (max-width: 54rem) {
         animation: none;
@@ -209,18 +209,19 @@ export const Investment = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-bottom: 8rem;
+  padding: 4.8rem 0;
 
   ${Title}::before {
     width: 21.4rem;
     left: 10.8rem;
+    letter-spacing: -1px;
   }
 
   .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 5.6rem;
-    gap: 5.6rem;
+    gap: 4.8rem;
     max-width: 70%;
     margin: 0 auto;
 
@@ -250,10 +251,12 @@ export const Investment = styled.section`
       h3 {
         font-family: 'Poppins', sans-serif;
         font-size: 3.2rem;
+        font-weight: 700;
         text-transform: uppercase;
         margin-top: 1.6rem;
         margin-bottom: 3.2rem;
         text-align: center;
+        line-height: 1.2;
       }
 
       p {
@@ -267,10 +270,10 @@ export const Investment = styled.section`
       .copiaCola {
         background: linear-gradient(90.58deg, #53b151 -4.83%, #3b8e39 97.01%);
         text-transform: uppercase;
-        color: var(--white);
-        font: 700 2rem 'Poppins', sans-serif;
-        padding: 1.2rem 3.2rem;
-        border-radius: 15px;
+        color: var(--black);
+        font: 600 2rem 'Poppins', sans-serif;
+        padding: 0.8rem 3.2rem;
+        border-radius: 6px;
         margin-top: 2.4rem;
         cursor: pointer;
       }
@@ -302,9 +305,12 @@ export const InscriptionForm = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 8rem;
+  margin: 8rem auto;
   flex-direction: column;
-  margin-bottom: 8rem;
+  background: var(--white);
+  max-width: 720px;
+  padding: 4rem;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.2);
 
   ${Title} p {
     font-size: 1.8rem;
@@ -313,7 +319,7 @@ export const InscriptionForm = styled.section`
   }
 
   form {
-    width: 40%;
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -321,13 +327,14 @@ export const InscriptionForm = styled.section`
 
     button[type='submit'] {
       background: linear-gradient(90.58deg, #db021c -4.83%, #ff3d3d 97.01%);
-      border-radius: 15px;
+      border-radius: 8px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 3rem;
+      font-size: 2.4rem;
       margin-top: 2.4rem;
-      padding: 1.6rem 8rem;
+      padding: 0.8rem 4rem;
+      letter-spacing: -0.8px;
     }
 
     .buttons {
@@ -392,29 +399,32 @@ export const InscriptionForm = styled.section`
       width: 100%;
       margin-bottom: 1.6rem;
 
+      p {
+        font-size: 1.8rem;
+        font-family: 'Open Sans', sans-serif;
+        margin: 0.4rem 0;
+        color: var(--red-400);
+        font-weight: 700;
+        letter-spacing: -0.7px;
+      }
+
+      .displayErros {
+        border: 1px solid var(--red-400);
+      }
+
       label {
-        color: var(--white);
-        font: 400 1.8rem 'Opens Sans', sans-serif;
+        color: var(--black);
+        font: 400 1.8rem 'Open Sans', sans-serif;
         margin-bottom: 0.8rem;
       }
 
       input,
       select {
-        background: #c5c4c9;
-        border-radius: 10px;
-        padding: 1.6rem;
+        border-radius: 5px;
+        padding: 1.2rem 1.2rem;
         font-size: 1.8rem;
         color: var(--black);
-
-        &:invalid.displayErrors,
-        &.displayErrors {
-          border: 1px solid var(--red);
-        }
-
-        &:valid,
-        &:not(:empty) {
-          border: 1px solid #53b151;
-        }
+        border: 1px solid #ccc;
       }
 
       .age {

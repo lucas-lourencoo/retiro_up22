@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Title = styled.h2`
-  font: 600 3.6rem 'Poppins', sans-serif;
+  font: 600 4rem 'Poppins', sans-serif;
   color: var(--black);
   text-transform: uppercase;
   margin-bottom: 4rem;
