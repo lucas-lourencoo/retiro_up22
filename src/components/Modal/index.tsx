@@ -39,7 +39,7 @@ const Modal = ({ modalIsOpen, setModalIsOpen }: ModalProps) => {
         <h1>Por aqui, tudo certo!</h1>
         <p>Sua inscrição foi recebida com sucesso.</p>
 
-        <a href='https://pag.ae/7XsKyc1us' target='__blank'>
+        <a href='https://pag.ae/7YhbJJ9sQ' target='__blank'>
           Quer pagar já? Clica aqui
         </a>
         <button onClick={closeModal}>TMJ! ✌🏻</button>

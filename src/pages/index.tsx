@@ -217,7 +217,7 @@ const Home = () => {
           <div className='card'>
             <FaCreditCard color='#f1f0f5' fontSize={90} />
             <h3>Cartão de crédito</h3>
-            <p>Parcelado em até 4x </p>
+            <p>Parcelado em até 4x pagando presencialmente.</p>
           </div>
           <div className='card'>
             <img src='/pix.png' alt='' />
