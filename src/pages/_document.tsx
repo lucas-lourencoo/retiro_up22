@@ -31,25 +31,34 @@ export default class MyDocument extends Document {
     return (
       <Html lang='pt-BR'>
         <Head>
-          <meta charSet='utf-8' />
-          <meta name='robots' content='index, follow' />
-          <meta
-            name='description'
-            content='Já estamos contando as horas, e você?'
-          />
-          <meta property='og:url' content='https://www.juventudeup.com.br' />
-          <meta property='og:type' content='website' />
-          <meta property='og:title' content='Retiro UP 22' />
-          <meta property='”og:site_name”' content='Retiro UP 22' />
-          <meta
-            property='og:description'
-            content='Já estamos contando as horas, e você?'
-          />
-          <meta property='og:image' content='/logo.png' />
-          <link rel='icon' href='/logo.png' />
-          <link rel='canonical' href='https://www.juventudeup.com.br/' />
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link rel='preconnect' href='https://fonts.gstatic.com' />
+          <title>Retiro UP 22</title>
+          <meta name='title' content='Retiro UP 22' />
+          <meta
+            name='description'
+            content='O Retiro UP 22, com o tema Em espírito, Em verdade vem aí! Você não pode ficar de fora. Já estamos contando os dias, e você?'
+          />
+          <meta property='og:type' content='website' />
+          <meta property='og:url' content='https://www.juventudeup.com.br/' />
+          <meta property='og:title' content='Retiro UP 22' />
+          <meta
+            property='og:description'
+            content='O Retiro UP 22, com o tema Em espírito, Em verdade vem aí! Você não pode ficar de fora. Já estamos contando os dias, e você?'
+          />
+          <meta property='og:image' content='/logo.png' />
+
+          <meta property='twitter:card' content='summary_large_image' />
+          <meta
+            property='twitter:url'
+            content='https://www.juventudeup.com.br/'
+          />
+          <meta property='twitter:title' content='Retiro UP 22' />
+          <meta
+            property='twitter:description'
+            content='O Retiro UP 22, com o tema Em espírito, Em verdade vem aí! Você não pode ficar de fora. Já estamos contando os dias, e você?'
+          />
+          <meta property='twitter:image' content='/logo.png' />
           <link
             href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap'
             rel='stylesheet'

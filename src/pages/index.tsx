@@ -145,9 +145,6 @@ const Home = () => {
 
   return (
     <main>
-      <Head>
-        <title>Retiro UP 21</title>
-      </Head>
       <Header />
       <WhatsButtons />
       <Hero id='home'>
