@@ -12,6 +12,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const inscription = await prisma.inscriptions.create({ data: req.body });
     return res.json(inscription);
   } catch (err) {
-    return res.status(500).json({ message: 'Unknown Issue', error: err });
+    return res.status(500).send(err.message);
   }
 };
