@@ -5,7 +5,6 @@ import { FiArrowDown, FiCalendar, FiMapPin, FiXCircle } from 'react-icons/fi';
 import { FaCreditCard, FaMoneyBillWave } from 'react-icons/fa';
 import Title from '../styles/components/Title';
 import axios from 'axios';
-import Head from 'next/head';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import WhatsButtons from '../components/WhatsButton';
 import Modal from '../components/Modal';
