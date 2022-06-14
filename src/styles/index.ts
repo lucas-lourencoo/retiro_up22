@@ -43,9 +43,9 @@ export const Hero = styled.section`
   }
 
   display: grid;
-  max-width: 75%;
+  max-width: 1120px;
   grid-template-columns: 1fr 1fr;
-  gap: 8rem;
+  gap: 10rem;
   margin: 0 auto;
   height: calc(100vh - 12rem);
   position: relative;
@@ -67,9 +67,10 @@ export const Hero = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
 
     .infos {
-      color: var(--black);
+      color: var(--white);
       font: 400 3.2rem 'Open Sans', sans-serif;
       opacity: 0;
       animation: appear 2s 1.8s forwards;
@@ -78,21 +79,22 @@ export const Hero = styled.section`
         display: flex;
         align-items: center;
         justify-content: center;
+        text-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
 
         + p {
           margin-top: 0.8rem;
         }
 
         svg {
-          color: var(--red-300);
+          color: var(--white);
           margin-right: 0.8rem;
         }
       }
     }
 
     img {
-      max-width: 80%;
-      margin-bottom: 4rem;
+      max-width: 100%;
+      margin-bottom: 5.6rem;
       animation: appearFromBottom 2s 0.8s forwards;
       opacity: 0;
     }
@@ -105,12 +107,12 @@ export const Hero = styled.section`
     justify-content: center;
 
     h1 {
-      font: 900 6.4rem/1.1 'Poppins', sans-serif;
+      font: 700 6.8rem/1 'Poppins', sans-serif;
       text-transform: uppercase;
-      color: var(--black);
-      margin-bottom: 5.6rem;
-      text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      color: var(--white);
+      text-shadow: 0 3px 2px rgba(0, 0, 0, 0.4);
       letter-spacing: -1.3px;
+      margin-bottom: 4.8rem;
 
       @media (max-width: 54rem) {
         animation: none;
@@ -118,7 +120,7 @@ export const Hero = styled.section`
       }
 
       span {
-        color: var(--red-400);
+        color: #ff9999;
       }
     }
 
@@ -154,7 +156,7 @@ export const Hero = styled.section`
           font-family: 'Poppins', sans-serif;
           width: 100%;
           padding: 2.8rem 0;
-          box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         p {
@@ -162,7 +164,8 @@ export const Hero = styled.section`
           text-transform: uppercase;
           font-family: 'Poppins', sans-serif;
           margin-top: 1.4rem;
-          color: var(--black);
+          color: var(--white);
+          text-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
         }
       }
     }
@@ -237,6 +240,9 @@ export const Investment = styled.section`
       padding: 12rem 2.4rem;
       border-radius: 30px;
       transition: 0.3s;
+      box-shadow: 0px 1.2px 1px rgba(0, 0, 0, 0.021),
+        0px 3.3px 2.9px rgba(0, 0, 0, 0.03),
+        0px 7.8px 6.9px rgba(0, 0, 0, 0.039), 0px 26px 23px rgba(0, 0, 0, 0.06);
 
       :hover {
         transform: translateY(-0.8rem);
@@ -272,7 +278,7 @@ export const Investment = styled.section`
       .copiaCola {
         background: linear-gradient(90.58deg, #53b151 -4.83%, #3b8e39 97.01%);
         text-transform: uppercase;
-        color: var(--black);
+        color: var(--white);
         font: 600 2rem 'Poppins', sans-serif;
         padding: 0.8rem 3.2rem;
         border-radius: 6px;
@@ -314,11 +320,15 @@ export const InscriptionForm = styled.section`
   max-width: 720px;
   padding: 4rem;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 
-  ${Title} p {
-    font-size: 1.8rem;
-    text-transform: none;
-    color: #f88085;
+  ${Title} {
+    color: var(--black);
+    p {
+      font-size: 1.8rem;
+      text-transform: none;
+      color: #f88085;
+    }
   }
 
   form {
@@ -466,6 +476,121 @@ export const InscriptionForm = styled.section`
     ${Title} {
       margin-bottom: 2.4rem;
       line-height: 1.2;
+    }
+  }
+`;
+
+export const Speaker = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem 0;
+  max-width: 1120px;
+  margin: 0 auto;
+
+  ${Title}::before {
+    width: 21.4rem;
+    left: 0rem;
+    letter-spacing: -1px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.8rem;
+
+    img {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      box-shadow: 0px 1.2px 1.3px rgba(0, 0, 0, 0.08),
+        0px 3.7px 3.5px rgba(0, 0, 0, 0.115),
+        0px 7.1px 8.4px rgba(0, 0, 0, 0.15), 0px 9px 28px rgba(0, 0, 0, 0.23);
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    article {
+      height: 100%;
+      font-size: 1.8rem;
+      color: var(--white);
+      line-height: 1.5;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        display: block;
+        letter-spacing: 0.8px;
+
+        & + p {
+          margin-top: 1.6rem;
+        }
+      }
+    }
+  }
+`;
+
+export const Theme = styled.section`
+  @keyframes AnimationUp3 {
+    from {
+      y: 127;
+    }
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem 0;
+  max-width: 1120px;
+  margin: 0 auto;
+
+  ${Title}::before {
+    width: 21.4rem;
+    left: 0rem;
+    letter-spacing: -1px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+
+    svg {
+      align-self: center;
+      justify-self: center;
+      max-width: 75%;
+      height: 100%;
+
+      #up1,
+      #up2,
+      #up3,
+      #up4 {
+        animation: AnimationUp3 2s forwards alternate infinite ease;
+      }
+    }
+
+    article {
+      height: 100%;
+      font-size: 1.8rem;
+      color: var(--white);
+      line-height: 1.5;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        display: block;
+        letter-spacing: 0.8px;
+
+        & + p {
+          margin-top: 1.6rem;
+        }
+      }
     }
   }
 `;

@@ -1,8 +1,19 @@
 import type { AppProps } from 'next/app';
+import { useEffect } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { GlobalStyle } from '../styles/global';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    setTimeout(() => {
+      if (typeof window !== 'undefined') {
+        const loader = document.getElementById('globalLoader');
+        loader.style.transition = '.2s';
+        if (loader) loader.style.opacity = '0';
+      }
+    }, 5000);
+  }, []);
+
   return (
     <>
       <GlobalStyle />

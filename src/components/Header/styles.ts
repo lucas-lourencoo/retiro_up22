@@ -47,12 +47,13 @@ export const HeaderLayout = styled.header<HeaderProps>`
     padding: 1.6rem 0;
 
     img {
-      max-height: 8rem;
+      max-height: 7rem;
+      filter: ${(props) => !props.isActive && `invert() brightness(10000%)`};
     }
 
     .navItem {
       .navLink {
-        color: var(--black);
+        color: ${(props) => (props.isActive ? `var(--black)` : `var(--white)`)};
         font: 600 1.8rem 'Open Sans', sans-serif;
         margin-right: 2.4rem;
         text-rendering: optimizeLegibility;
@@ -69,7 +70,7 @@ export const HeaderLayout = styled.header<HeaderProps>`
         padding: 0.8rem 2.4rem;
         text-transform: uppercase;
         text-rendering: optimizeLegibility;
-        animation: light 1s 1s infinite alternate ease;
+        animation: light 0.5s 1s infinite alternate ease;
         cursor: pointer;
         border-radius: 6px;
       }

@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <HeaderLayout isActive={isActive}>
       <div className='menu'>
-        <img src='/logo.png' alt='Logo Enjoy' />
+        <img src='/logo-foguin.png' alt='Logo Enjoy' />
 
         <nav>
           <ul>

@@ -46,7 +46,7 @@ export default class MyDocument extends Document {
             property='og:description'
             content='O Retiro UP 22, com o tema Em espírito, Em verdade vem aí! Você não pode ficar de fora. Já estamos contando os dias, e você?'
           />
-          <meta property='og:image' content='/logo.png' />
+          <meta property='og:image' content='/logo-foguin.png' />
 
           <meta property='twitter:card' content='summary_large_image' />
           <meta
@@ -58,7 +58,8 @@ export default class MyDocument extends Document {
             property='twitter:description'
             content='O Retiro UP 22, com o tema Em espírito, Em verdade vem aí! Você não pode ficar de fora. Já estamos contando os dias, e você?'
           />
-          <meta property='twitter:image' content='/logo.png' />
+          <meta property='twitter:image' content='/logo-foguin.png' />
+          <link rel='shortcut icon' href='/logo-foguin.png' type='image/png' />
           <link
             href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap'
             rel='stylesheet'
@@ -70,6 +71,11 @@ export default class MyDocument extends Document {
         </Head>
 
         <body>
+          <div id={'globalLoader'}>
+            <div className='splash'>
+              <img src='/logo-foguin.png' alt='' />
+            </div>
+          </div>
           <Main />
           <NextScript />
         </body>

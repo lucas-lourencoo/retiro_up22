@@ -8,6 +8,40 @@ export const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
   }
 
+  @keyframes appearFire {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes pulseFire {
+    from{
+      filter: brightness(60%);
+    }
+    to {
+      filter: brightness(120%);
+    }
+  }
+
+  .splash{
+  position: absolute;
+  z-index: 1000;
+  background: var(--white);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    opacity: 0;
+    animation: appearFire 1.5s .5s forwards, pulseFire 1s alternate infinite;
+  }
+}
+
   :root{
     font-size: 62.5%;
     --black: #1C1C1E;
@@ -23,22 +57,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body{
-    background-color: var(--white);
+    background: linear-gradient(110deg, #FF5858 0%, #2A234E 90%);
     position: relative;
     min-height: 100vh;
-
-    ::before{
-      content: '';
-      background-image: url('/back2.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: -1;
-      opacity: 1;
-      top: 0;
-    }
   }
 
   button, input, textarea, select{
