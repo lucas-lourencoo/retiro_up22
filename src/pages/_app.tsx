@@ -8,10 +8,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     setTimeout(() => {
       if (typeof window !== 'undefined') {
         const loader = document.getElementById('globalLoader');
-        loader.style.transition = '.2s';
+        loader.style.transition = '.4s';
         if (loader) loader.style.opacity = '0';
       }
-    }, 5000);
+    }, 4500);
   }, []);
 
   return (
