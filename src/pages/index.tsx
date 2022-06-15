@@ -210,7 +210,7 @@ const Home = () => {
         />
       </Hero>
 
-      <Theme id='investiment'>
+      <Theme id='theme'>
         <Title>Sobre nosso tema</Title>
         <div className='grid'>
           <article>
@@ -341,7 +341,7 @@ const Home = () => {
         </div>
       </Theme>
 
-      <Speaker id='investiment'>
+      <Speaker id='speaker'>
         <Title>Presença confirmada!</Title>
         <div className='grid'>
           <img src='/reuel.png' alt='' />

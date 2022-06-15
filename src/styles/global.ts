@@ -27,7 +27,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .splash{
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   background: var(--white);
   height: 100vh;

@@ -489,6 +489,10 @@ export const Speaker = styled.section`
   max-width: 1120px;
   margin: 0 auto;
 
+  @media (max-width: 54rem) {
+    padding: 0;
+  }
+
   ${Title}::before {
     width: 21.4rem;
     left: 0rem;
@@ -499,6 +503,12 @@ export const Speaker = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4.8rem;
+
+    @media (max-width: 54rem) {
+      grid-template-columns: none;
+      gap: 4rem;
+      max-width: 90%;
+    }
 
     img {
       display: flex;
@@ -558,6 +568,12 @@ export const Theme = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
+
+    @media (max-width: 54rem) {
+      grid-template-columns: none;
+      gap: 2.4rem;
+      max-width: 90%;
+    }
 
     svg {
       align-self: center;
