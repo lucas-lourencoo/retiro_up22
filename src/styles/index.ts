@@ -616,7 +616,7 @@ export const Footer = styled.footer`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3.6rem 12rem;
+  padding: 1.6rem 12rem;
   box-shadow: inset 0px 7px 6px rgba(0, 0, 0, 0.25);
 
   .images img + img {

@@ -18,19 +18,17 @@ export const HeaderLayout = styled.header<HeaderProps>`
     display: none;
   }
 
-  border-bottom: 2px solid #555;
   width: 100%;
   position: ${(props) => (props.isActive ? 'sticky' : 'relative')};
   top: ${(props) => props.isActive && '-0.4rem'};
+  box-shadow: ${(props) => props.isActive && '0 2px 6px rgba(0,0,0,.7)'};
   z-index: 10;
 
   ${(props) =>
     props.isActive &&
     `::before {
     content: '';
-    background-image: url('/back2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: var(--black);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -47,20 +45,24 @@ export const HeaderLayout = styled.header<HeaderProps>`
     padding: 1.6rem 0;
 
     img {
-      max-height: 7rem;
+      max-height: 6.4rem;
       filter: ${(props) => !props.isActive && `invert() brightness(10000%)`};
     }
 
     .navItem {
       .navLink {
-        color: ${(props) => (props.isActive ? `var(--black)` : `var(--white)`)};
-        font: 600 1.8rem 'Open Sans', sans-serif;
+        color: var(--white);
+        font: 500 1.8rem 'Open Sans', sans-serif;
         margin-right: 2.4rem;
         text-rendering: optimizeLegibility;
         cursor: pointer;
         text-transform: uppercase;
         transition: filter 0.3s;
         letter-spacing: -0.5px;
+
+        :hover {
+          filter: brightness(80%);
+        }
       }
 
       .navLinkButton {

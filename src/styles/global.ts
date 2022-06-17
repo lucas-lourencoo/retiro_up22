@@ -57,7 +57,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body{
-    background: linear-gradient(110deg, #FF5858 0%, #2A234E 90%);
+    background: linear-gradient(91deg, #FF5858 -10%, #2A234E 90%);
     position: relative;
     min-height: 100vh;
   }
