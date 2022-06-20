@@ -15,6 +15,8 @@ datasource db {
 model Inscriptions {
   id            String  @id @default(uuid())
   name          String
+  celphone      String
+  email         String
   bornDate      String
   size          String
   medicine      String

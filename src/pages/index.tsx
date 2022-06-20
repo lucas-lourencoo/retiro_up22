@@ -35,6 +35,8 @@ enum PaymentEnum {
 
 interface IFormInput {
   name: string;
+  celphone: string;
+  email: string;
   bornDate: string;
   size: SizeEnum;
   medicine: 'Sim' | 'Não';
@@ -66,6 +68,7 @@ const Home = () => {
     const formattedData = {
       ...data,
       bornDate: new Date(data.bornDate).toLocaleDateString(),
+      celphone: data.celphone.toString(),
     };
 
     toast.loading('Enviando...');
@@ -411,6 +414,24 @@ const Home = () => {
               className={errors.name ? 'displayErros' : ''}
             />
             {errors.name && <p>Nome é obrigatório</p>}
+          </div>
+          <div className='input'>
+            <label>Telefone:</label>
+            <input
+              {...register('celphone', { required: true })}
+              className={errors.celphone ? 'displayErros' : ''}
+              type='number'
+            />
+            {errors.celphone && <p>Telefone é obrigatório</p>}
+          </div>
+          <div className='input'>
+            <label>Email:</label>
+            <input
+              {...register('email', { required: true })}
+              className={errors.email ? 'displayErros' : ''}
+              type='email'
+            />
+            {errors.email && <p>Email é obrigatório</p>}
           </div>
           <div className='input'>
             <label>Data de nascimento:</label>
