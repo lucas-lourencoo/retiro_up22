@@ -71,8 +71,6 @@ const Home = () => {
       celphone: data.celphone.toString(),
     };
 
-    console.log(formattedData);
-
     toast.loading('Enviando...');
 
     axios
@@ -430,8 +428,8 @@ const Home = () => {
             <label>Email:</label>
             <input
               {...register('email', { required: true })}
-              className={errors.email ? 'displayErros' : ''}
               type='email'
+              className={errors.email ? 'displayErros' : ''}
             />
             {errors.email && <p>Email é obrigatório</p>}
           </div>
