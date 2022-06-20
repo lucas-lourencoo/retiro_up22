@@ -35,7 +35,7 @@ enum PaymentEnum {
 
 interface IFormInput {
   name: string;
-  celphone: string;
+  celphone: number;
   email: string;
   bornDate: string;
   size: SizeEnum;
@@ -70,6 +70,8 @@ const Home = () => {
       bornDate: new Date(data.bornDate).toLocaleDateString(),
       celphone: data.celphone.toString(),
     };
+
+    console.log(formattedData);
 
     toast.loading('Enviando...');
 
