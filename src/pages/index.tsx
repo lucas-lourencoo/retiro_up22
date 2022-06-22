@@ -710,7 +710,9 @@ const Home = () => {
             {errors.size && <p>Escolha um tamanho</p>}
           </div>
           <div className='input'>
-            <label>Tem alguma alergia e/ou restrição alimentar?</label>
+            <label htmlFor='allergy'>
+              Tem alguma alergia e/ou restrição alimentar?
+            </label>
             <div className='buttons'>
               <button>
                 Sim
@@ -719,6 +721,7 @@ const Home = () => {
                   value='Sim'
                   onClick={handleAllergy}
                   {...register('allergy', { required: true })}
+                  id='allergy'
                 />
               </button>
               <button>
@@ -728,6 +731,7 @@ const Home = () => {
                   value='Não'
                   onClick={handleAllergy}
                   {...register('allergy', { required: true })}
+                  id='allergy'
                 />
               </button>
             </div>
@@ -745,7 +749,7 @@ const Home = () => {
             </div>
           )}
           <div className='input'>
-            <label>Faz uso de remédio controlado?</label>
+            <label htmlFor='medicine'>Faz uso de remédio controlado?</label>
             <div className='buttons'>
               <button>
                 Sim
@@ -754,6 +758,7 @@ const Home = () => {
                   value='Sim'
                   onClick={handleMedicine}
                   {...register('medicine', { required: true })}
+                  id='medicine'
                 />
               </button>
               <button>
@@ -763,6 +768,7 @@ const Home = () => {
                   value='Não'
                   onClick={handleMedicine}
                   {...register('medicine', { required: true })}
+                  id='medicine'
                 />
               </button>
             </div>
@@ -782,7 +788,7 @@ const Home = () => {
             </div>
           )}
           <div className='input'>
-            <label>Você congrega em alguma igreja?</label>
+            <label htmlFor='church'>Você congrega em alguma igreja?</label>
             <div className='buttons'>
               <button>
                 Sim
@@ -791,6 +797,7 @@ const Home = () => {
                   value='Sim'
                   onClick={handleChurch}
                   {...register('church', { required: true })}
+                  id='church'
                 />
               </button>
               <button>
@@ -800,6 +807,7 @@ const Home = () => {
                   value='Não'
                   onClick={handleChurch}
                   {...register('church', { required: true })}
+                  id='church'
                 />
               </button>
             </div>
