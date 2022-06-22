@@ -449,15 +449,17 @@ const Home = () => {
       </Hero>
 
       <Gallery id='gallery'>
-        <Title>Dá uma olhada nessas fotos</Title>
-        <ImageGallery
-          items={images}
-          autoPlay={true}
-          slideInterval={5000}
-          slideDuration={800}
-          additionalClass='gallery'
-          lazyLoad={true}
-        />
+        <div className='container'>
+          <Title>Dá uma olhada nessas fotos</Title>
+          <ImageGallery
+            items={images}
+            autoPlay={true}
+            slideInterval={5000}
+            slideDuration={800}
+            additionalClass='gallery'
+            lazyLoad={true}
+          />
+        </div>
       </Gallery>
 
       <Theme id='theme'>

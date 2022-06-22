@@ -210,17 +210,29 @@ export const Hero = styled.section`
 `;
 
 export const Gallery = styled.section`
-  display: flex;
-  flex-direction: column;
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 4rem 0;
+  padding: 2rem 0;
+  margin-top: 4rem;
+  background: radial-gradient(
+      54.85% 54.85% at 50% 50%,
+      #f8f7fc 0%,
+      #b8b8b8 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.4);
+
+  .container {
+    max-width: 1120px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
 
   @media (max-width: 54rem) {
     max-width: 90%;
   }
 
   ${Title} {
+    color: var(--black);
     line-height: 1.2;
   }
 

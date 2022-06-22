@@ -60,6 +60,19 @@ export const GlobalStyle = createGlobalStyle`
     background: linear-gradient(91deg, #FF5858 -10%, #2A234E 90%);
     position: relative;
     min-height: 100vh;
+
+    ::before{
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-image: url('/background2.jpg');
+      background-size: contain;
+      background-position: center;
+      z-index: -1;
+      mix-blend-mode: multiply;
+      opacity: .3;
+    }
   }
 
   button, input, textarea, select{
