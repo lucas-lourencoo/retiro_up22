@@ -655,45 +655,50 @@ const Home = () => {
         <Title>Formulário de inscrição</Title>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className='input'>
-            <label>Nome completo:</label>
+            <label htmlFor='name'>Nome completo:</label>
             <input
               {...register('name', { required: true })}
               className={errors.name ? 'displayErros' : ''}
+              id='name'
             />
             {errors.name && <p>Nome é obrigatório</p>}
           </div>
           <div className='input'>
-            <label>Telefone:</label>
+            <label htmlFor='cellphone'>Telefone:</label>
             <input
               {...register('celphone', { required: true })}
               className={errors.celphone ? 'displayErros' : ''}
               type='number'
+              id='cellphone'
             />
             {errors.celphone && <p>Telefone é obrigatório</p>}
           </div>
           <div className='input'>
-            <label>Email:</label>
+            <label htmlFor='email'>Email:</label>
             <input
               {...register('email', { required: true })}
               type='email'
               className={errors.email ? 'displayErros' : ''}
+              id='email'
             />
             {errors.email && <p>Email é obrigatório</p>}
           </div>
           <div className='input'>
-            <label>Data de nascimento:</label>
+            <label htmlFor='born_date'>Data de nascimento:</label>
             <input
               {...register('bornDate', { required: true })}
               type='date'
               className={errors.bornDate ? 'displayErros' : ''}
+              id='born_date'
             />
             {errors.bornDate && <p>Data de nascimento é obrigatória</p>}
           </div>
           <div className='input'>
-            <label>Tamanho da camiseta:</label>
+            <label htmlFor='size'>Tamanho da camiseta:</label>
             <select
               {...register('size', { required: true })}
               className={errors.size ? 'displayErros' : ''}
+              id='size'
             >
               <option value=''>Escolher...</option>
               <option value='P'>P</option>
@@ -730,10 +735,11 @@ const Home = () => {
           </div>
           {allergyActive && (
             <div className='input'>
-              <label>Quais?</label>
+              <label htmlFor='whatAllergy'>Quais?</label>
               <input
                 {...register('allergyName', { required: true })}
                 className={errors.allergyName ? 'displayErros' : ''}
+                id='whatAllergy'
               />
               {errors.allergyName && <p>Obrigatório informar o nome</p>}
             </div>
@@ -764,10 +770,11 @@ const Home = () => {
           </div>
           {medicineActive && (
             <div className='input'>
-              <label>Informe o(s) medicamento(s)</label>
+              <label htmlFor='medicineName'>Informe o(s) medicamento(s)</label>
               <input
                 {...register('medicineName', { required: true })}
                 className={errors.medicineName ? 'displayErros' : ''}
+                id='medicineName'
               />
               {errors.medicineName && (
                 <p>Obrigatório informar o(s) medicamento(s)</p>
@@ -800,19 +807,21 @@ const Home = () => {
           </div>
           {churchActive && (
             <div className='input'>
-              <label>Qual o nome?</label>
+              <label htmlFor='whatChurchName'>Qual o nome?</label>
               <input
                 {...register('churchName', { required: true })}
                 className={errors.churchName ? 'displayErros' : ''}
+                id='whatChurchName'
               />
               {errors.churchName && <p>Obrigatório informar o nome</p>}
             </div>
           )}
           <div className='input'>
-            <label>Forma de pagamento</label>
+            <label htmlFor='payment'>Forma de pagamento</label>
             <select
               {...register('paymentMethod', { required: true })}
               className={errors.paymentMethod ? 'displayErros' : ''}
+              id='payment'
             >
               <option value=''>Escolher...</option>
               <option value='À vista'>À vista (Pix ou cartão)</option>
