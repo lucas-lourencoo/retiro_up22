@@ -29,13 +29,34 @@ const Header = () => {
         <nav>
           <ul>
             <li className='navItem'>
-              <a className='navLink'>Home</a>
+              <a className='navLink' href='#home'>
+                Home
+              </a>
             </li>
             <li className='navItem'>
-              <a className='navLink'>Investimento</a>
+              <a className='navLink' href='#gallery'>
+                Galeria
+              </a>
             </li>
             <li className='navItem'>
-              <a className='navLinkButton'>Inscrever-se</a>
+              <a className='navLink' href='#theme'>
+                TEma
+              </a>
+            </li>
+            <li className='navItem'>
+              <a className='navLink' href='#preacher'>
+                PReletor
+              </a>
+            </li>
+            <li className='navItem'>
+              <a className='navLink' href='#investiment'>
+                Investimento
+              </a>
+            </li>
+            <li className='navItem'>
+              <a className='navLinkButton' href='#form'>
+                Inscrever-se
+              </a>
             </li>
           </ul>
         </nav>

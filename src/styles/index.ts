@@ -209,6 +209,50 @@ export const Hero = styled.section`
   }
 `;
 
+export const Gallery = styled.section`
+  display: flex;
+  flex-direction: column;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 4rem 0;
+
+  @media (max-width: 54rem) {
+    max-width: 90%;
+  }
+
+  ${Title} {
+    line-height: 1.2;
+  }
+
+  .photo_item {
+    width: 90% !important;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .image-gallery-description {
+    background: none;
+    font-family: 'Montserrat', sans-serif;
+    right: 0;
+    bottom: 10px;
+    font-size: 3.2rem;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+    font-weight: 600;
+  }
+
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: calc(100vh - 80px);
+  }
+
+  .image-gallery-icon {
+    color: var(--white);
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
+  }
+`;
+
 export const Investment = styled.section`
   display: flex;
   align-items: center;
@@ -218,7 +262,7 @@ export const Investment = styled.section`
 
   ${Title}::before {
     width: 21.4rem;
-    left: 10.8rem;
+    left: 0rem;
     letter-spacing: -1px;
   }
 

@@ -7,6 +7,7 @@ import {
   InscriptionForm,
   Speaker,
   Theme,
+  Gallery,
 } from '../styles';
 import { FiArrowDown, FiCalendar, FiMapPin, FiXCircle } from 'react-icons/fi';
 import { FaCreditCard, FaMoneyBillWave } from 'react-icons/fa';
@@ -16,6 +17,8 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import WhatsButtons from '../components/WhatsButton';
 import Modal from '../components/Modal';
 import toast from 'react-hot-toast';
+import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
 
 enum SizeEnum {
   'P',
@@ -152,10 +155,242 @@ const Home = () => {
     }
   };
 
+  const images = [
+    {
+      original: '/gallery/1.jpg',
+      thumbnail: '/gallery/1.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/2.jpg',
+      thumbnail: '/gallery/2.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/3.jpg',
+      thumbnail: '/gallery/3.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/4.jpg',
+      thumbnail: '/gallery/4.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/5.jpg',
+      thumbnail: '/gallery/5.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/6.jpg',
+      thumbnail: '/gallery/6.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/7.jpg',
+      thumbnail: '/gallery/7.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/8.jpg',
+      thumbnail: '/gallery/8.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/9.jpg',
+      thumbnail: '/gallery/9.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/10.jpg',
+      thumbnail: '/gallery/10.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/11.jpg',
+      thumbnail: '/gallery/11.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/12.jpg',
+      thumbnail: '/gallery/12.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/13.jpg',
+      thumbnail: '/gallery/13.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/14.jpg',
+      thumbnail: '/gallery/14.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/15.jpg',
+      thumbnail: '/gallery/15.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/16.jpg',
+      thumbnail: '/gallery/16.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/17.jpg',
+      thumbnail: '/gallery/17.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/18.jpg',
+      thumbnail: '/gallery/18.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/19.jpg',
+      thumbnail: '/gallery/19.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/20.jpg',
+      thumbnail: '/gallery/20.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/21.jpg',
+      thumbnail: '/gallery/21.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/22.jpg',
+      thumbnail: '/gallery/22.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/23.jpg',
+      thumbnail: '/gallery/23.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/24.jpg',
+      thumbnail: '/gallery/24.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/25.jpg',
+      thumbnail: '/gallery/25.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/26.jpg',
+      thumbnail: '/gallery/26.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/27.jpg',
+      thumbnail: '/gallery/27.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/28.jpg',
+      thumbnail: '/gallery/28.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/29.jpg',
+      thumbnail: '/gallery/29.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/30.jpg',
+      thumbnail: '/gallery/30.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/31.jpg',
+      thumbnail: '/gallery/31.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/32.jpg',
+      thumbnail: '/gallery/32.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/33.jpg',
+      thumbnail: '/gallery/33.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/34.jpg',
+      thumbnail: '/gallery/34.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/35.jpg',
+      thumbnail: '/gallery/35.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/36.jpg',
+      thumbnail: '/gallery/36.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/37.jpg',
+      thumbnail: '/gallery/37.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+    {
+      original: '/gallery/38.jpg',
+      thumbnail: '/gallery/38.jpg',
+      originalAlt: 'Retiro UP 21',
+      thumbnailAlt: 'Retiro UP 21',
+    },
+  ];
+
   return (
     <main>
       <Header />
       <WhatsButtons />
+
       <Hero id='home'>
         <div className='left'>
           <img src='/logo-tema.png' alt='Logo retiro' />
@@ -212,6 +447,18 @@ const Home = () => {
           strokeWidth={3}
         />
       </Hero>
+
+      <Gallery id='gallery'>
+        <Title>Dá uma olhada nessas fotos</Title>
+        <ImageGallery
+          items={images}
+          autoPlay={true}
+          slideInterval={5000}
+          slideDuration={800}
+          additionalClass='gallery'
+          lazyLoad={true}
+        />
+      </Gallery>
 
       <Theme id='theme'>
         <Title>Sobre nosso tema</Title>
@@ -344,7 +591,7 @@ const Home = () => {
         </div>
       </Theme>
 
-      <Speaker id='speaker'>
+      <Speaker id='preacher'>
         <Title>Presença confirmada!</Title>
         <div className='grid'>
           <img src='/reuel.png' alt='' />
@@ -404,7 +651,7 @@ const Home = () => {
         </div>
       </Investment>
 
-      <InscriptionForm>
+      <InscriptionForm id='form'>
         <Title>Formulário de inscrição</Title>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className='input'>
