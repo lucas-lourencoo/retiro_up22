@@ -59,6 +59,11 @@ export const Hero = styled.section`
     opacity: 0.1;
     mix-blend-mode: darken;
     width: 100%;
+
+    @media (max-width: 54rem) {
+      height: 100%;
+      width: auto;
+    }
   }
 
   .arrowDown {
