@@ -51,6 +51,16 @@ export const Hero = styled.section`
   position: relative;
   padding-bottom: 8rem;
 
+  video {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.1;
+    mix-blend-mode: darken;
+    width: 100%;
+  }
+
   .arrowDown {
     position: absolute;
     left: 48%;

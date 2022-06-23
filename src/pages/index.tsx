@@ -392,6 +392,7 @@ const Home = () => {
       <WhatsButtons />
 
       <Hero id='home'>
+        <video src='/video/back2.mp4' muted autoPlay loop></video>
         <div className='left'>
           <img src='/logo-tema.png' alt='Logo retiro' />
 
